@@ -34,10 +34,12 @@ Parent element should be first, never changed in page life, element which is par
 	
 #### JavaScript ####
 initialization
-	$('#foo').tooltip();
-unbind all events
-	$('#foo').tooltip('destroy');
 
+	$('#foo').tooltip();
+	
+unbind all events
+
+	$('#foo').tooltip('destroy');
 	
 * * *
 Copyright (c) 2011 Krzysztof Urbas (@krzysu). jquery.tooltip.pack is available under the MIT license.
