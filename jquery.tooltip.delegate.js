@@ -1,12 +1,24 @@
 /*
- * jquery.tooltip.delegate.js
- * desc: delegate based, ajaxproof
- * version: 0.1
- * 
- * how to use?
- * init: 		$(parent_selector).tooltip();
- * destroy: 	$(parent_selector).tooltip('destroy');
-*/ 
+	jquery.tooltip.delegate.js
+	desc: delegate based, ajaxproof
+	version: 0.1
+	author: Krzysztof Urbas, @krzysu, myviews.pl, 2011
+
+	how to use?
+	for example #foo is parent element
+
+	<div id="foo">
+	    <a href='#' title='text to be shown in tooltip'>hover me</a>
+	    <a href='#' title='text to be shown in tooltip'>hover me</a>
+	    <a href='#' title='text to be shown in tooltip'>hover me</a>
+	</div>
+
+	init: 		$('#foo').tooltip();
+	destroy: 	$('#foo').tooltip('destroy');
+ 
+	copyright (c) 2011-2012 Krzysztof Urbas. jquery.tooltip.pack is available under the MIT license.
+	http://github.com/krzysu/jquery.tooltip.pack
+*/
 
 
 (function($) {
@@ -49,7 +61,7 @@
 				}
 
 				$tooltip
-					.text(title)
+					.html(title)
 					.css({
 				  		top: e.pageY + settings.shiftY,
 				  		left: e.pageX + settings.shiftX

@@ -1,0 +1,129 @@
+<!doctype html>  
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>jquery.tooltip.pack example page</title>
+	<meta name="author" content="@krzysu, myviews.pl">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		body { font-family: sans-serif; font-size: 16px; line-height: 1.5em; margin: 50px; max-width: 800px; }
+		h1, h2 { margin-bottom: 0; line-height: 1.5em;}
+		.credits { margin-top: 300px; }
+
+		/* jquery.tooltip.delegate */
+		#tooltip-delegate span {
+			border-bottom: 1px dotted #000;
+		}
+
+		#tooltip {
+			white-space: nowrap;
+			border: 1px solid #000;
+			padding: 3px 8px;
+			background: #fff;
+		}
+
+		/* jquery.tooltip.img */
+		#tooltip-image ul {	margin: 0; padding: 0; }
+		#tooltip-image li { display: inline-block; }
+		#tooltip-image .caption { display: none; }
+		#tooltip-image img { width: 120px; }
+
+
+		#img-tooltip {
+			padding: 10px;
+			border: 1px solid #000;
+			background: #fff;
+		}
+		#img-tooltip img {
+			display: block;
+		}
+		#img-tooltip .caption {
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+			background: #fff;
+			padding: 3px 8px;
+		}
+	</style>
+</head>
+
+<body>
+    <h1>jquery.tooltip.pack example page</h1>
+    <span>tooltips for every occasion</span> | 
+    <a href="http://github.com/krzysu/jquery.tooltip.pack">visit home page</a>
+
+    <div>
+    	<h2>jquery.tooltip.delegate</h2>
+
+    	<div id="tooltip-delegate">
+		    <p>
+	    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    		tempor incididunt ut labore et dolore magna aliqua. 
+	    		<a href='#' title='text to be shown in tooltip'>hover me</a>
+	    		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	    		consequat. <span title='text to be shown in tooltip'>hover me</span> Duis aute irure dolor in reprehenderit in voluptate velit esse
+	    		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	    		proident, <span title='text to be <br />shown in tooltip'>hover me</span> sunt in culpa qui officia deserunt mollit anim id est laborum.
+		    </p>
+		</div>
+    </div>
+
+    <div>
+    	<h2>jquery.tooltip.img</h2>
+
+    	<div id="tooltip-image">
+		    <p>
+	    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    		tempor incididunt ut labore et dolore magna aliqua. 
+	    		<a href='http://farm3.static.flickr.com/2641/4163443812_df0b200930.jpg'>
+    				hover me
+    				<span class="caption">image caption</span>
+    			</a>
+	    		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	    		consequat.
+		    </p>
+		    <ul>
+		    	<li>
+		    		<a href="http://farm3.static.flickr.com/2641/4163443812_df0b200930.jpg">
+		    			<img alt="img" src="http://farm3.static.flickr.com/2641/4163443812_df0b200930_m.jpg" />
+		    			<span class="caption">image caption</span>
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a href="http://farm3.static.flickr.com/2591/4135665747_3091966c91.jpg">
+		    			<img alt="img" src="http://farm3.static.flickr.com/2591/4135665747_3091966c91_m.jpg" />
+		    			<span class="caption">image caption</span>
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a href="http://farm3.static.flickr.com/2647/3867677191_04d8d52b1a.jpg">
+		    			<img alt="img" src="http://farm3.static.flickr.com/2647/3867677191_04d8d52b1a_m.jpg" />
+		    			<span class="caption">image caption</span>
+		    		</a>
+		    	</li>
+		    </ul>
+		</div>
+    </div>
+
+    <div class="credits">
+    	copyright (c) 2011-2012 Krzysztof Urbas. <a href="http://github.com/krzysu/jquery.tooltip.pack">jquery.tooltip.pack<a/> is available under the MIT license.
+    </div>
+    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="jquery.tooltip.delegate.js"></script>
+	<script src="jquery.tooltip.img.js"></script>
+	<script>
+		$(function () {
+			$('#tooltip-delegate').tooltip();
+
+			$('#tooltip-image a').imgTooltip();
+		});
+	</script>
+
+</body>
+</html>

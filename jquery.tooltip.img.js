@@ -1,7 +1,8 @@
 /*
 	jquery.tooltip.img.js
-	desc: tooltip with img as content, with optional caption
+	desc: tooltip with image as a content, with optional caption
 	version: 0.1
+	author: Krzysztof Urbas, @krzysu, myviews.pl
 
 	how to use?
 	init: 		$(selector).imgTooltip(options);
@@ -23,6 +24,9 @@
 		img { .. }
 		.caption { .. }
 	}
+
+	copyright (c) 2011-2012 Krzysztof Urbas. jquery.tooltip.pack is available under the MIT license.
+	http://github.com/krzysu/jquery.tooltip.pack
 */
 
 
